@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+
+<title>Jatsia netissä</title>
+<!-- <meta name="description" content="">
+<meta name="author" content="">-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+	<!-- INITIAL VIEW -->
+	<div style="" id="initContainer">
+
+		<div id="logo">
+			<strong>Jatsi</strong>
+		</div>
+
+		<div id="login">
+			<form>
+			<input class="shadow" type="text" placeholder="Nimimerkki" maxlength="20"> 
+			<input class="shadow" type="submit" id="submit" value="Lähetä">
+			</form>
+		</div>
+
+		<div id="notification">
+		</div>
+
+	</div>
+
+
+	<!-- LOBBY VIEW -->
+	<div style="display:none" id="lobbyContainer">
+
+		<div id="playerList">
+			<h3>Aulassa olevat pelaajat:</h3>
+			<div class="shadow box">
+				<ul>
+				</ul>
+			</div>
+		</div>
+
+		<div id="lobbyChat">
+			<h3>Chat:</h3>
+			<form class="shadow">
+			<input type="text" placeholder="Viesti"> 
+			<input type="submit" id="submitLobbyMsg" value="Lähetä">
+			</form>
+			<div class="shadow box">
+				<ul>
+				</ul>
+			</div>
+		</div>
+
+		<div id="gameCreation">
+			<h3>Pelit</h3>
+			<button id="createGame" class="shadow">Uusi peli</button>
+		</div>
+
+	</div>
+
+	<div style="display:none" id="gameContainer">
+
+		<div id="scores">
+			<h3>Pelaajien pisteet:</h3>
+			<div class="shadow box">
+
+			</div>
+		<button id="toLobby" class="shadow">Poistu pelistä</button>
+		</div>
+
+		<div id="gameChat">
+			<h3>Chat:</h3>
+			<form class="shadow">
+			<input type="text" placeholder="Viesti"> 
+			<input type="submit" id="submitGameMsg" value="Lähetä">
+			</form>
+			<div class="shadow box">
+				<ul>
+				</ul>
+			</div>
+		</div>
+
+		<div id="playArea">
+			<h3><!-- Sepon vuoro --></h3>
+			<div class="countdown"></div>
+			<div class="info"><!-- Valitse säästettävät nopat --></div>
+			<div id="dices">
+				<!--
+				<div class="dice one"></div>
+				<div class="dice two"></div>
+				<div class="dice three"></div>
+				<div class="dice four"></div>
+				<div class="dice five"></div>-->
+			</div>
+			<div class="info2"><!-- Valitse säästettävät nopat --></div>
+
+
+			<button style="display:none" class="shadow roll">Heitä</button>
+			<div class="info3"></div> 
+		</div>
+
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+	<script src="./scripts.js"></script>
+</body>
+</html>
